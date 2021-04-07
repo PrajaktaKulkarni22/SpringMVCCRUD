@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Student</title>
+</head>
+<body>
+    <div align="center">
+    <form th:action="@{/save}" method="post" th:object="${student}">
+        <table border="0" cellpadding="10">
+         <tr>
+             <td><label for="id">Id</label></td>
+             <td><input type="text" id="id" th:field="*{id}" readonly="readonly"></td>
+         </tr>
+
+         <tr>
+        <td><label for="firstname">Firstname</label></td>
+             <td> <input id="firstname" type="text" th:field="*{firstname}"></td>
+         </tr>
+
+         <tr>
+            <td><label for="lastname">Lastname</label></td>
+             <td><input id="lastname" type="text" th:field="*{lastname}"></td>
+         </tr>
+
+            <tr>
+                <td><label for="age">Age</label></td>
+                <td><input id="age" type="number" th:field="*{age}"></td>
+            </tr>
+
+            <tr>
+                <td><label for="city">City</label></td>
+                <td><input id="city" type="text" th:field="*{city}"></td>
+            </tr>
+
+            <tr>
+                <td><button type="submit">Submit</button></td>
+            </tr>
+
+        </table>
+    </form>
+    </div>
+</body>
+</html>
